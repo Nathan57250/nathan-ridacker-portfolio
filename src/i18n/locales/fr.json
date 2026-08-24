@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Nathan Ridacker",
+    "title": "Développeur Front-End",
+    "subtitle": "6 ans d'expérience à construire des interfaces ambitieuses avec React, Svelte & React Native. Basé au Luxembourg, disponible en remote.",
+    "cta_projects": "Voir mes projets",
+    "cta_contact": "Me contacter",
+    "available": "Ouvert aux opportunités remote"
+  },
+  "about": {
+    "section_label": "À propos",
+    "title": "Passionné par les interfaces qui prennent vie",
+    "body": "Développeur front-end chez FundsDLT au Luxembourg depuis juin 2020. Au fil de ces 6 ans, j'ai développé une maîtrise solide de React, TypeScript et des écosystèmes modernes du web. En parallèle, je construis des projets personnels ambitieux — systèmes temps réel, pixel art interactif, applications mobiles — pour explorer ce que le front-end peut vraiment faire. Je cherche activement des opportunités remote en Europe où ce type de travail est valorisé.",
+    "photo_alt": "Photo de Nathan Ridacker",
+    "experience_label": "Ans d'expérience",
+    "location_label": "Luxembourg — Remote"
+  },
+  "projects": {
+    "section_label": "Projets",
+    "title": "Ce que je construis",
+    "items": {
+      "photographer": {
+        "title": "Portfolio Photographe",
+        "description": "Site vitrine réalisé en Svelte pour un photographe professionnel. Design organique warm cream et typographie serif, galerie immersive, performances optimisées.",
+        "tags": ["Svelte", "SvelteKit", "TypeScript", "CSS"]
+      },
+      "karate": {
+        "title": "Gestionnaire Club de Karaté",
+        "description": "Application mobile de gestion d'un club de karaté — suivi des membres, présences, progression des ceintures et calendrier d'événements.",
+        "tags": ["React Native", "Expo", "TypeScript"]
+      },
+      "openspace": {
+        "title": "Open Space Virtuel",
+        "description": "Bureau virtuel temps réel en pixel art où les employés naviguent avec leurs avatars personnalisés. Stardew Valley rencontre le télétravail.",
+        "tags": ["React", "Phaser 3", "Socket.io", "TypeScript"],
+        "wip": true
+      }
+    }
+  },
+  "skills": {
+    "section_label": "Compétences",
+    "title": "Ma stack technique",
+    "categories": {
+      "frontend": "Front-End",
+      "mobile": "Mobile",
+      "tools": "Outils & Autres"
+    }
+  },
+  "contact": {
+    "section_label": "Contact",
+    "title": "Travaillons ensemble",
+    "subtitle": "Disponible pour des opportunités remote en Europe. Je réponds sous 48h.",
+    "email_label": "M'écrire",
+    "github_label": "GitHub",
+    "linkedin_label": "LinkedIn"
+  }
+}

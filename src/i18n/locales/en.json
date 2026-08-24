@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Nathan Ridacker",
+    "title": "Front-End Developer",
+    "subtitle": "6 years building ambitious interfaces with React, Svelte & React Native. Based in Luxembourg, available remote.",
+    "cta_projects": "See my work",
+    "cta_contact": "Get in touch",
+    "available": "Open to remote opportunities"
+  },
+  "about": {
+    "section_label": "About",
+    "title": "Passionate about interfaces that feel alive",
+    "body": "Front-end developer at FundsDLT in Luxembourg since June 2020. Over 6 years, I've built a solid command of React, TypeScript, and the modern web ecosystem. On the side, I'm building ambitious personal projects — real-time systems, interactive pixel art, mobile apps — to explore what front-end can truly do. Actively looking for remote opportunities in Europe where this kind of work is valued.",
+    "photo_alt": "Photo of Nathan Ridacker",
+    "experience_label": "Years of experience",
+    "location_label": "Luxembourg — Remote"
+  },
+  "projects": {
+    "section_label": "Projects",
+    "title": "What I've been building",
+    "items": {
+      "photographer": {
+        "title": "Photographer Portfolio",
+        "description": "Showcase site built with Svelte for a professional photographer. Organic warm design, serif typography, immersive gallery, optimised performance.",
+        "tags": ["Svelte", "SvelteKit", "TypeScript", "CSS"]
+      },
+      "karate": {
+        "title": "Karaté Club Manager",
+        "description": "Mobile app for managing a karaté club — member tracking, attendance, belt progression, and an event calendar.",
+        "tags": ["React Native", "Expo", "TypeScript"]
+      },
+      "openspace": {
+        "title": "Virtual Open Space",
+        "description": "Real-time pixel-art virtual office where employees navigate with custom avatars. Think Stardew Valley meets remote work.",
+        "tags": ["React", "Phaser 3", "Socket.io", "TypeScript"],
+        "wip": true
+      }
+    }
+  },
+  "skills": {
+    "section_label": "Skills",
+    "title": "My tech stack",
+    "categories": {
+      "frontend": "Front-End",
+      "mobile": "Mobile",
+      "tools": "Tools & Others"
+    }
+  },
+  "contact": {
+    "section_label": "Contact",
+    "title": "Let's work together",
+    "subtitle": "Available for remote opportunities in Europe. I reply within 48 hours.",
+    "email_label": "Email me",
+    "github_label": "GitHub",
+    "linkedin_label": "LinkedIn"
+  }
+}
