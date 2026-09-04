@@ -18,7 +18,6 @@ export default function Skills() {
 
           {/* Section label */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '64px' }}>
-            <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>03</span>
             <div style={{ flex: 1, height: '1px', background: 'var(--color-border)' }} />
             <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>{t('skills.section_label').toUpperCase()}</span>
           </div>

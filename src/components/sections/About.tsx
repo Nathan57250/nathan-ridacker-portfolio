@@ -13,7 +13,6 @@ export default function About() {
 
           {/* Section label */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '64px' }}>
-            <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>01</span>
             <div style={{ flex: 1, height: '1px', background: 'var(--color-border)' }} />
             <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>{t('about.section_label').toUpperCase()}</span>
           </div>

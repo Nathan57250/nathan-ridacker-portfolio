@@ -12,7 +12,6 @@ export default function Contact() {
 
           {/* Section label */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '80px' }}>
-            <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>04</span>
             <div style={{ flex: 1, height: '1px', background: 'var(--color-border)' }} />
             <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>{t('contact.section_label').toUpperCase()}</span>
           </div>

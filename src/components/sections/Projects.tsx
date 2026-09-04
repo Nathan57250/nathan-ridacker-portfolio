@@ -239,7 +239,6 @@ export default function Projects() {
 
           {/* Section label */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '64px' }}>
-            <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>02</span>
             <div style={{ flex: 1, height: '1px', background: 'var(--color-border)' }} />
             <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>{t('projects.section_label').toUpperCase()}</span>
           </div>
@@ -264,7 +263,7 @@ export default function Projects() {
                   } : {})}
                   style={{
                     display: 'grid',
-                    gridTemplateColumns: '80px 1fr auto',
+                    gridTemplateColumns: '1fr auto',
                     gap: '32px',
                     alignItems: 'start',
                     padding: '40px 0',
@@ -285,11 +284,6 @@ export default function Projects() {
                     el.style.margin = '0'
                   }}
                 >
-                  {/* Number */}
-                  <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.08em', paddingTop: '4px' }}>
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-
                   {/* Content + Preview */}
                   <div style={{ display: 'flex', gap: '40px', alignItems: 'flex-start' }}>
                     <div style={{ flex: 1 }}>
