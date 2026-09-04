@@ -31,6 +31,11 @@
         "description": "Site vitrine réalisé en Svelte pour un photographe professionnel. Design organique warm cream et typographie serif, galerie immersive, performances optimisées.",
         "tags": ["Svelte", "SvelteKit", "TypeScript", "CSS"]
       },
+      "elderScrolls": {
+        "title": "Elder Scrolls Lore",
+        "description": "Wiki encyclopédique tri-lingue (FR/EN/ES) dédié au lore de Tamriel. Projet-expérience entièrement piloté avec Claude Opus 4.6 : architecture, code et articles générés par IA sous ma direction, pour explorer ce qu'un développeur et une IA peuvent produire ensemble.",
+        "tags": ["SvelteKit 5", "MDsveX", "Tailwind v4", "Pagefind", "IA-assisté"]
+      },
       "karate": {
         "title": "Gestionnaire Club de Karaté",
         "description": "Application mobile de gestion d'un club de karaté — suivi des membres, présences, progression des ceintures et calendrier d'événements.",

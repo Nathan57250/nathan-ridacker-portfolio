@@ -2,7 +2,11 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Container from '../ui/Container'
 
-const PROJECTS = ['photographer', 'karate', 'openspace'] as const
+const PROJECTS = ['photographer', 'elderScrolls', 'karate', 'openspace'] as const
+
+const PROJECT_LINKS: Partial<Record<(typeof PROJECTS)[number], string>> = {
+  elderScrolls: 'https://elder-scrolls-lore.vercel.app',
+}
 
 function PhotographerPreview() {
   return (
@@ -129,8 +133,98 @@ function OpenspacePreview() {
   )
 }
 
+function ElderScrollsPreview() {
+  const eras = [
+    { label: "Aube", color: '#eab308' },
+    { label: "Méréth.", color: '#22c55e' },
+    { label: "1ère Ère", color: '#f97316' },
+    { label: "2ème Ère", color: '#a855f7' },
+    { label: "3ème Ère", color: '#ef4444' },
+    { label: "4ème Ère", color: '#3b82f6' },
+  ]
+  return (
+    <div style={{
+      width: '200px',
+      height: '130px',
+      background: '#09090b',
+      border: '1px solid #27272a',
+      overflow: 'hidden',
+      flexShrink: 0,
+      position: 'relative',
+      padding: '10px 12px',
+      boxSizing: 'border-box',
+      fontFamily: 'Inter, system-ui, sans-serif',
+    }}>
+      {/* Language toggle (top-right) */}
+      <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '6px' }}>
+        <div style={{ display: 'flex', gap: '2px', fontSize: '6px', color: '#71717a' }}>
+          <span style={{
+            padding: '1px 3px',
+            background: '#0c4a6e',
+            color: '#7dd3fc',
+            borderRadius: '2px',
+            fontWeight: 600,
+          }}>FR</span>
+          <span style={{ padding: '1px 3px' }}>EN</span>
+          <span style={{ padding: '1px 3px' }}>ES</span>
+        </div>
+      </div>
+
+      {/* Title */}
+      <div style={{ fontSize: '12px', fontWeight: 800, color: '#fafafa', lineHeight: 1.1, marginBottom: '2px', textAlign: 'center' }}>
+        Grand Livre du Lore
+      </div>
+      <div style={{ fontSize: '6.5px', color: '#a1a1aa', marginBottom: '8px', textAlign: 'center' }}>
+        Encyclopédie du lore The Elder Scrolls
+      </div>
+
+      {/* Era grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '3px' }}>
+        {eras.map(era => (
+          <div key={era.label} style={{
+            background: '#18181b',
+            border: '1px solid #27272a',
+            borderRadius: '2px',
+            padding: '3px 4px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '3px',
+          }}>
+            <span style={{
+              width: '4px',
+              height: '4px',
+              borderRadius: '50%',
+              background: era.color,
+              flexShrink: 0,
+            }} />
+            <span style={{ fontSize: '6.5px', color: '#fafafa', fontWeight: 500 }}>{era.label}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* AI badge */}
+      <div style={{
+        position: 'absolute',
+        bottom: '6px',
+        right: '8px',
+        fontFamily: 'DM Mono, monospace',
+        fontSize: '6px',
+        padding: '1px 4px',
+        border: '1px solid #0c4a6e',
+        color: '#7dd3fc',
+        letterSpacing: '0.08em',
+        borderRadius: '2px',
+        background: '#09090b',
+      }}>
+        AI-BUILT
+      </div>
+    </div>
+  )
+}
+
 const PREVIEWS = {
   photographer: PhotographerPreview,
+  elderScrolls: ElderScrollsPreview,
   karate: KaratePreview,
   openspace: OpenspacePreview,
 }
@@ -156,6 +250,7 @@ export default function Projects() {
                 title: string; description: string; tags: string[]; wip?: boolean
               }
               const Preview = PREVIEWS[key]
+              const link = PROJECT_LINKS[key]
 
               return (
                 <motion.div
@@ -164,6 +259,9 @@ export default function Projects() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
+                  {...(link ? {
+                    onClick: () => window.open(link, '_blank', 'noopener,noreferrer'),
+                  } : {})}
                   style={{
                     display: 'grid',
                     gridTemplateColumns: '80px 1fr auto',
@@ -171,7 +269,7 @@ export default function Projects() {
                     alignItems: 'start',
                     padding: '40px 0',
                     borderTop: '1px solid var(--color-border)',
-                    cursor: 'default',
+                    cursor: link ? 'pointer' : 'default',
                     transition: 'background 0.2s, padding 0.2s, margin 0.2s',
                   }}
                   onMouseEnter={e => {
