@@ -73,6 +73,23 @@
       }
     }
   },
+  "testimonials": {
+    "section_label": "Témoignages",
+    "items": [
+      {
+        "quote": "Nathan a su traduire mon univers en un site qui me ressemble. À l'écoute, réactif et toujours de bon conseil sur les choix techniques.",
+        "name": "Florian Ridacker",
+        "role": "Photographe · Silences Sauvages",
+        "placeholder": true
+      },
+      {
+        "quote": "Fini les feuilles de présence papier : l'application nous fait gagner un temps précieux à chaque cours, et le suivi des ceintures n'a jamais été aussi simple.",
+        "name": "Prénom Nom",
+        "role": "Président · Club de karaté",
+        "placeholder": true
+      }
+    ]
+  },
   "skills": {
     "section_label": "Compétences",
     "title": "Ma stack technique",
@@ -81,6 +98,32 @@
       "mobile": "Mobile",
       "tools": "Outils & Autres"
     }
+  },
+  "process": {
+    "section_label": "Méthode",
+    "title": "Comment je travaille",
+    "steps": [
+      {
+        "title": "Échange découverte",
+        "description": "Un premier appel gratuit et sans engagement pour comprendre votre activité, vos besoins et vos contraintes."
+      },
+      {
+        "title": "Cadrage & devis",
+        "description": "Je formalise le périmètre, les priorités et le planning, avec un devis clair et détaillé."
+      },
+      {
+        "title": "Maquettes",
+        "description": "Vous visualisez l'application avant le développement et validez les écrans clés."
+      },
+      {
+        "title": "Développement itératif",
+        "description": "Des livraisons régulières que vous testez au fil de l'eau, pour ajuster le tir au plus tôt."
+      },
+      {
+        "title": "Mise en ligne & suivi",
+        "description": "Déploiement, prise en main par vos équipes, puis maintenance et évolutions selon vos besoins."
+      }
+    ]
   },
   "contact": {
     "section_label": "Contact",

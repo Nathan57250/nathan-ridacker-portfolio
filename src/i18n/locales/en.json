@@ -73,6 +73,23 @@
       }
     }
   },
+  "testimonials": {
+    "section_label": "Testimonials",
+    "items": [
+      {
+        "quote": "Nathan captured my world in a website that truly feels like me. Attentive, responsive and always giving sound advice on technical choices.",
+        "name": "Florian Ridacker",
+        "role": "Photographer · Silences Sauvages",
+        "placeholder": true
+      },
+      {
+        "quote": "No more paper attendance sheets: the app saves us precious time at every class, and tracking belt progression has never been easier.",
+        "name": "First Last",
+        "role": "President · Karaté club",
+        "placeholder": true
+      }
+    ]
+  },
   "skills": {
     "section_label": "Skills",
     "title": "My tech stack",
@@ -81,6 +98,32 @@
       "mobile": "Mobile",
       "tools": "Tools & Others"
     }
+  },
+  "process": {
+    "section_label": "Process",
+    "title": "How I work",
+    "steps": [
+      {
+        "title": "Discovery call",
+        "description": "A free, no-commitment first call to understand your business, your needs and your constraints."
+      },
+      {
+        "title": "Scoping & quote",
+        "description": "I define the scope, priorities and timeline, with a clear and detailed quote."
+      },
+      {
+        "title": "Mockups",
+        "description": "You see the application before development starts and sign off on the key screens."
+      },
+      {
+        "title": "Iterative development",
+        "description": "Regular deliveries you can test along the way, so we can adjust course early."
+      },
+      {
+        "title": "Launch & support",
+        "description": "Deployment, onboarding for your teams, then maintenance and new features as you need them."
+      }
+    ]
   },
   "contact": {
     "section_label": "Contact",
