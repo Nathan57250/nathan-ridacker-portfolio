@@ -1,32 +1,68 @@
-# React + TypeScript + Vite
+# Nathan Ridacker — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfolio of Nathan Ridacker, freelance developer building custom business applications (web & mobile) in Luxembourg and France.
 
-Currently, two official plugins are available:
+**Live:** https://nathan-ridacker-portfolio.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- React 19 + TypeScript, built with Vite
+- framer-motion (loaded through `LazyMotion` + `m` components)
+- i18next / react-i18next — English and French
+- Self-hosted fonts via Fontsource (Playfair Display, DM Mono, Inter)
+- lucide-react icons
+- Deployed on Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Responsive layout with a mobile burger menu
+- Dark / light theme: follows the system preference, remembers the visitor's choice, no flash on load
+- Language detection (browser language, fallback to English), remembered on toggle, `<html lang>` kept in sync
+- Respects `prefers-reduced-motion`
+- Legal notice page (`/mentions-legales`) and karate club case study (`/projets/karate`)
+- Open Graph / Twitter Card meta tags
+- Strict Content Security Policy (no third-party requests)
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Getting started
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install --registry=https://registry.npmjs.org/
+npm run dev       # dev server
+npm run build     # type-check + production build
+npm run preview   # serve the production build
+npm run lint      # oxlint
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Always install from the public npm registry so that `package-lock.json` stays installable on Vercel.
+
+## Project structure
+
+```
+src/
+├── App.tsx                 # Page switch (home / legal notice / case study) + footer
+├── components/
+│   ├── layout/Navbar.tsx
+│   ├── pages/              # LegalNotice, KarateCase
+│   ├── sections/           # Hero, About, Services, Projects, Testimonials, Skills, Process, Contact
+│   └── ui/Container.tsx
+├── hooks/useTheme.tsx
+├── i18n/                   # i18next setup + locales/{en,fr}.json
+└── index.css               # Theme variables, reset, responsive and hover rules
+public/
+├── theme-init.js           # Sets the theme before first paint (external because the CSP forbids inline scripts)
+├── favicon.svg
+└── og-image.png
+vercel.json                 # Security headers (CSP…) and rewrites for /mentions-legales and /projets/karate
+```
+
+## Content notes
+
+- **Texts** live in `src/i18n/locales/{en,fr}.json`; both files must keep the same keys.
+- **Styling** uses inline styles plus a few classes in `index.css`. Responsive rules and hover states must be CSS classes: a property set inline cannot be overridden by `:hover` or media queries.
+- **New pages**: add the component to `PAGES` in `App.tsx` and a matching rewrite in `vercel.json`.
+- **Karate screenshots**: drop images in `src/assets/projects/karate/` (`01-….png`, `02-….png`…); they are picked up automatically, sorted by filename.
+- **Testimonials**: entries flagged `"placeholder": true` are only shown in development. Replace them with real quotes and remove the flag to publish them.
+
+## License
+
+© Nathan Ridacker. All rights reserved — the code is public for reference only.
