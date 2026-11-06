@@ -2,6 +2,7 @@ import About from './components/sections/About'
 import Contact from './components/sections/Contact'
 import Hero from './components/sections/Hero'
 import Projects from './components/sections/Projects'
+import Services from './components/sections/Services'
 import Skills from './components/sections/Skills'
 import Navbar from './components/layout/Navbar'
 import LegalNotice from './components/pages/LegalNotice'
@@ -22,6 +23,7 @@ export default function App() {
           <>
             <Hero />
             <About />
+            <Services />
             <Projects />
             <Skills />
             <Contact />

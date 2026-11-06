@@ -28,6 +28,7 @@ export default function Navbar() {
 
   const links = [
     { href: '/#about', label: lang === 'fr' ? 'À propos' : 'About' },
+    { href: '/#services', label: 'Services' },
     { href: '/#projects', label: lang === 'fr' ? 'Projets' : 'Projects' },
     { href: '/#skills', label: 'Stack' },
     { href: '/#contact', label: 'Contact' },

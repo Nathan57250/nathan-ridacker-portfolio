@@ -24,6 +24,28 @@
     "tagline": "Freelance · Luxembourg & France",
     "location_label": "Luxembourg — France"
   },
+  "services": {
+    "section_label": "Services",
+    "title": "What I can do for you",
+    "items": [
+      {
+        "title": "Internal tools & back-offices",
+        "description": "Replace spreadsheets and manual data entry with an app designed for your team: customer, inventory, scheduling or case management."
+      },
+      {
+        "title": "Dashboards",
+        "description": "Bring your data together and track your key metrics at a glance, with views tailored to each type of user."
+      },
+      {
+        "title": "Field mobile apps",
+        "description": "iOS and Android apps for your teams on the move: data entry, job tracking, photos, checklists, straight from their phone."
+      },
+      {
+        "title": "App redesign & takeover",
+        "description": "Is your tool getting old, or is its developer no longer available? I take over the existing code, modernise it and keep it evolving without starting from scratch."
+      }
+    ]
+  },
   "projects": {
     "section_label": "Projects",
     "title": "Selected work",

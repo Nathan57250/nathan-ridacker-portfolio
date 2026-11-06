@@ -24,6 +24,28 @@
     "tagline": "Freelance · Luxembourg & France",
     "location_label": "Luxembourg — France"
   },
+  "services": {
+    "section_label": "Services",
+    "title": "Ce que je peux faire pour vous",
+    "items": [
+      {
+        "title": "Outils internes & back-offices",
+        "description": "Remplacez tableurs et saisies manuelles par une application pensée pour votre équipe : gestion de clients, de stocks, de plannings, de dossiers."
+      },
+      {
+        "title": "Tableaux de bord",
+        "description": "Centralisez vos données et suivez vos indicateurs clés d'un coup d'œil, avec des vues adaptées à chaque profil d'utilisateur."
+      },
+      {
+        "title": "Applications mobiles terrain",
+        "description": "Des apps iOS et Android pour vos équipes en déplacement : saisie, suivi d'interventions, photos, check-lists, directement depuis le téléphone."
+      },
+      {
+        "title": "Refonte & reprise d'applications",
+        "description": "Votre outil vieillit ou son développeur n'est plus disponible ? Je reprends l'existant, le modernise et le fais évoluer sans repartir de zéro."
+      }
+    ]
+  },
   "projects": {
     "section_label": "Projets",
     "title": "Quelques réalisations",
