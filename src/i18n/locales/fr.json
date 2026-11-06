@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Nathan Ridacker — Applications métier sur mesure",
+    "description": "Développeur freelance au Luxembourg et en France : applications web et mobiles sur mesure, outils internes, back-offices, tableaux de bord et apps terrain."
+  },
   "nav": {
     "about": "À propos",
     "services": "Services",

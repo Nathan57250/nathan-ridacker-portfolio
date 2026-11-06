@@ -12,7 +12,7 @@ import KarateCase from './components/pages/KarateCase'
 import { ThemeProvider } from './hooks/useTheme'
 import { useTranslation } from 'react-i18next'
 import { domAnimation, LazyMotion, MotionConfig } from 'framer-motion'
-import type { ComponentType } from 'react'
+import { useEffect, type ComponentType } from 'react'
 
 const PAGES: Record<string, ComponentType> = {
   '/mentions-legales': LegalNotice,
@@ -24,6 +24,12 @@ const Page = PAGES[window.location.pathname.replace(/\/$/, '')]
 export default function App() {
   const { t } = useTranslation()
   const footerText = { fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.06em' }
+
+  // Sub-pages set their own title
+  useEffect(() => {
+    if (!Page) document.title = t('meta.title')
+    document.querySelector('meta[name="description"]')?.setAttribute('content', t('meta.description'))
+  }, [t])
 
   return (
     <ThemeProvider>
