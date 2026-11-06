@@ -3,9 +3,22 @@ import { initReactI18next } from 'react-i18next'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
 
+const SUPPORTED = ['fr', 'en'] as const
+
+function detectLanguage(): string {
+  const saved = localStorage.getItem('lang')
+  if (saved && (SUPPORTED as readonly string[]).includes(saved)) return saved
+  const browser = navigator.languages
+    .map(l => l.slice(0, 2).toLowerCase())
+    .find(l => (SUPPORTED as readonly string[]).includes(l))
+  return browser ?? 'en'
+}
+
+i18n.on('languageChanged', lng => document.documentElement.setAttribute('lang', lng))
+
 i18n.use(initReactI18next).init({
   resources: { en: { translation: en }, fr: { translation: fr } },
-  lng: 'fr',
+  lng: detectLanguage(),
   fallbackLng: 'en',
   interpolation: { escapeValue: false },
 })

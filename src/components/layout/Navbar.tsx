@@ -110,7 +110,13 @@ export default function Navbar() {
 
         {/* Lang toggle */}
         <button
-          onClick={() => i18n.changeLanguage(lang === 'fr' ? 'en' : 'fr')}
+          onClick={() => {
+            const next = lang === 'fr' ? 'en' : 'fr'
+            localStorage.setItem('lang', next)
+            i18n.changeLanguage(next)
+          }}
+          aria-label={lang === 'fr' ? 'Switch to English' : 'Passer en français'}
+          lang={lang === 'fr' ? 'en' : 'fr'}
           style={{
             fontFamily: 'DM Mono, monospace',
             fontSize: '11px',
