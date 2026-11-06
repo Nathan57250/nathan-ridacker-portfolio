@@ -19,7 +19,7 @@ export default function Skills() {
           {/* Section label */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '64px' }}>
             <div style={{ flex: 1, height: '1px', background: 'var(--color-border)' }} />
-            <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>{t('skills.section_label').toUpperCase()}</span>
+            <h2 style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>{t('skills.section_label').toUpperCase()}</h2>
           </div>
 
           <m.div
@@ -30,9 +30,9 @@ export default function Skills() {
           >
             {(Object.entries(SKILLS)).map(([cat, items]) => (
               <div key={cat} className="skills-col">
-                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-accent)', letterSpacing: '0.1em', marginBottom: '28px' }}>
+                <h3 style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-accent)', letterSpacing: '0.1em', marginBottom: '28px' }}>
                   {t(`skills.categories.${cat}`).toUpperCase()}
-                </p>
+                </h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {items.map(skill => (
                     <span

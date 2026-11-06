@@ -25,7 +25,7 @@ export default function Testimonials() {
           {/* Section label */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '64px' }}>
             <div style={{ flex: 1, height: '1px', background: 'var(--color-border)' }} />
-            <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>{t('testimonials.section_label').toUpperCase()}</span>
+            <h2 style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.1em' }}>{t('testimonials.section_label').toUpperCase()}</h2>
           </div>
 
           <div className="testimonials-grid">

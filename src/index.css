@@ -5,7 +5,7 @@
   --color-border: #282824;
   --color-accent: #c8ff47;
   --color-text: #f0ede6;
-  --color-muted: #56564f;
+  --color-muted: #808078;
   --color-muted-2: #8a8a80;
   --color-nav-bg: rgba(14, 14, 12, 0.96);
 }
@@ -17,7 +17,7 @@
   --color-border: #d0cabc;
   --color-accent: #1e4a0a;
   --color-text: #1a1916;
-  --color-muted: #8a8278;
+  --color-muted: #6e675c;
   --color-muted-2: #5a5448;
   --color-nav-bg: rgba(245, 241, 232, 0.96);
 }
@@ -47,6 +47,10 @@ html, body {
   width: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, body { scroll-behavior: auto; }
 }
 
 body {

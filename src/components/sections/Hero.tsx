@@ -8,7 +8,7 @@ export default function Hero() {
     <section id="hero" className="hero" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', overflow: 'hidden', width: '100%' }}>
 
       {/* Big background number */}
-      <div style={{
+      <div aria-hidden="true" style={{
         position: 'absolute', top: '50%', right: '-20px',
         transform: 'translateY(-50%)',
         fontFamily: 'Playfair Display, serif',
