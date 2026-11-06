@@ -155,6 +155,10 @@
     "subtitle": "Un besoin, une idée, un outil à remplacer ? Décrivez-moi votre projet, je vous réponds sous 48h avec une première estimation.",
     "email_label": "M'écrire"
   },
+  "not_found": {
+    "title": "Page introuvable",
+    "text": "Cette page n'existe pas ou a été déplacée. Vérifiez l'adresse ou revenez à l'accueil."
+  },
   "legal": {
     "title": "Mentions légales",
     "back": "Retour à l'accueil",

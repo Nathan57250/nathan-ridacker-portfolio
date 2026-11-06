@@ -155,6 +155,10 @@
     "subtitle": "A need, an idea, a tool to replace? Tell me about your project and I'll get back to you within 48 hours with a first estimate.",
     "email_label": "Email me"
   },
+  "not_found": {
+    "title": "Page not found",
+    "text": "This page doesn't exist or has been moved. Check the address or head back to the home page."
+  },
   "legal": {
     "title": "Legal notice",
     "back": "Back to home",

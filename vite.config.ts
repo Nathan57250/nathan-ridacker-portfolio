@@ -40,6 +40,11 @@ function pageMeta(): Plugin {
         mkdirSync(join(outDir, path), { recursive: true })
         writeFileSync(join(outDir, path, 'index.html'), page)
       }
+      // Vercel serves 404.html (with a 404 status) for any unmatched path
+      const notFound = html
+        .replace(/<title>.*?<\/title>/, '<title>Page introuvable — Nathan Ridacker</title>\n    <meta name="robots" content="noindex" />')
+        .replace(/\s*<link rel="canonical"[^>]*>/, '')
+      writeFileSync(join(outDir, '404.html'), notFound)
     },
   }
 }

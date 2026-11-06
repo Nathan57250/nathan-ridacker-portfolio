@@ -9,6 +9,7 @@ import Testimonials from './components/sections/Testimonials'
 import Navbar from './components/layout/Navbar'
 import LegalNotice from './components/pages/LegalNotice'
 import KarateCase from './components/pages/KarateCase'
+import NotFound from './components/pages/NotFound'
 import { ThemeProvider } from './hooks/useTheme'
 import { useTranslation } from 'react-i18next'
 import { domAnimation, LazyMotion, MotionConfig } from 'framer-motion'
@@ -19,7 +20,8 @@ const PAGES: Record<string, ComponentType> = {
   '/projets/karate': KarateCase,
 }
 
-const Page = PAGES[window.location.pathname.replace(/\/$/, '')]
+const path = window.location.pathname.replace(/\/$/, '')
+const Page = path === '' || path === '/index.html' ? undefined : PAGES[path] ?? NotFound
 
 export default function App() {
   const { t } = useTranslation()

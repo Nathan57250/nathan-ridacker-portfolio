@@ -20,6 +20,7 @@ Portfolio of Nathan Ridacker, freelance developer building custom business appli
 - Language detection (browser language, fallback to English), remembered on toggle, `<html lang>` kept in sync
 - Respects `prefers-reduced-motion`
 - Legal notice page (`/mentions-legales`) and karate club case study (`/projets/karate`)
+- Custom 404 page (static `404.html` generated at build, served by Vercel with a real 404 status)
 - Open Graph / Twitter Card meta tags
 - Strict Content Security Policy (no third-party requests)
 
