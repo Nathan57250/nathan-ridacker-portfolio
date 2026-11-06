@@ -8,17 +8,20 @@ const ThemeContext = createContext<{ theme: Theme; toggle: () => void }>({
 })
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    const saved = localStorage.getItem('theme') as Theme | null
-    return saved ?? 'dark'
-  })
+  const [theme, setTheme] = useState<Theme>(() =>
+    document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark',
+  )
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
   }, [theme])
 
-  const toggle = () => setTheme(t => (t === 'dark' ? 'light' : 'dark'))
+  // Only persist an explicit choice, so the system preference applies until then
+  const toggle = () => {
+    const next = theme === 'dark' ? 'light' : 'dark'
+    localStorage.setItem('theme', next)
+    setTheme(next)
+  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggle }}>
