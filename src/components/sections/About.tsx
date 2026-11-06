@@ -60,7 +60,7 @@ export default function About() {
               </p>
 
               {/* Stats */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '40px', paddingTop: '32px', borderTop: '1px solid var(--color-border)' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '40px', marginBottom: '40px', paddingTop: '32px', borderTop: '1px solid var(--color-border)' }}>
                 <div>
                   <div style={{ fontFamily: 'Playfair Display, serif', fontSize: '40px', fontWeight: 900, color: 'var(--color-text)', lineHeight: 1 }}>
                     6<span style={{ color: 'var(--color-accent)' }}>+</span>
@@ -70,11 +70,11 @@ export default function About() {
                   </div>
                 </div>
                 <div>
-                  <div style={{ fontFamily: 'Playfair Display, serif', fontSize: '40px', fontWeight: 900, color: 'var(--color-text)', lineHeight: 1 }}>
-                    3
+                  <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(30px, 4vw, 40px)', fontWeight: 900, color: 'var(--color-text)', lineHeight: 1 }}>
+                    Web <span style={{ color: 'var(--color-accent)' }}>&amp;</span> Mobile
                   </div>
                   <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.08em', marginTop: '6px' }}>
-                    {t('about.projects_label').toUpperCase()}
+                    {t('about.platforms_label').toUpperCase()}
                   </div>
                 </div>
               </div>
