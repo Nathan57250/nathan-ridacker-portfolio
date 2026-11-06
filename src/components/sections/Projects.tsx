@@ -253,24 +253,21 @@ export default function Projects() {
               }
               const Preview = PREVIEWS[key]
               const link = PROJECT_LINKS[key]
+              const Row = (link ? m.a : m.div) as typeof m.a
+              const linkProps = !link ? {}
+                : link.startsWith('/') ? { href: link }
+                : { href: link, target: '_blank', rel: 'noopener noreferrer' }
 
               return (
-                <m.div
+                <Row
                   key={key}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
-                  {...(link ? {
-                    onClick: () => link.startsWith('/')
-                      ? window.location.assign(link)
-                      : window.open(link, '_blank', 'noopener,noreferrer'),
-                  } : {})}
+                  {...linkProps}
                   className="project-row"
-                  style={{
-                    borderTop: '1px solid var(--color-border)',
-                    cursor: link ? 'pointer' : 'default',
-                  }}
+                  style={{ borderTop: '1px solid var(--color-border)' }}
                 >
                   {/* Content + Preview */}
                   <div className="project-body">
@@ -319,15 +316,17 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    {/* CSS Preview */}
-                    <Preview />
+                    {/* CSS Preview (decorative, kept out of the link's accessible name) */}
+                    <div aria-hidden="true">
+                      <Preview />
+                    </div>
                   </div>
 
                   {/* Arrow */}
-                  <span className="project-arrow" style={{ fontFamily: 'DM Mono, monospace', fontSize: '20px', color: 'var(--color-muted)', paddingTop: '4px' }}>
+                  <span className="project-arrow" aria-hidden="true" style={{ fontFamily: 'DM Mono, monospace', fontSize: '20px', color: 'var(--color-muted)', paddingTop: '4px' }}>
                     →
                   </span>
-                </m.div>
+                </Row>
               )
             })}
 

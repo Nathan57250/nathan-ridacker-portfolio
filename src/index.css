@@ -95,6 +95,7 @@ body {
 .btn-outline { border: 1px solid var(--color-border); transition: border-color 0.2s; }
 .skill-chip { border: 1px solid var(--color-border); color: var(--color-muted-2); transition: all 0.15s; }
 .project-row { padding: 40px 0; transition: background 0.2s, padding 0.2s, margin 0.2s; }
+.project-row:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
 
 .nav-link:hover { color: var(--color-text); }
 .icon-btn:hover { color: var(--color-accent); }
