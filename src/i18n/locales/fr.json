@@ -183,7 +183,7 @@
         "lines": [
           "Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience.",
           "Les informations que vous transmettez par e-mail sont utilisées uniquement pour répondre à votre demande et ne sont jamais cédées à des tiers.",
-          "Les polices de caractères sont chargées depuis Google Fonts, ce qui implique la transmission de votre adresse IP à Google. L'hébergeur peut également conserver des journaux techniques (adresse IP, navigateur) à des fins de sécurité.",
+          "L'hébergeur peut conserver des journaux techniques (adresse IP, navigateur) à des fins de sécurité.",
           "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à nathanridacker@gmail.com. Vous pouvez aussi adresser une réclamation à la CNIL (cnil.fr)."
         ]
       }

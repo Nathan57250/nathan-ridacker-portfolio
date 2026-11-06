@@ -183,7 +183,7 @@
         "lines": [
           "This site sets no cookies and uses no analytics.",
           "Information you send by email is only used to answer your request and is never shared with third parties.",
-          "Fonts are loaded from Google Fonts, which means your IP address is sent to Google. The host may also keep technical logs (IP address, browser) for security purposes.",
+          "The host may keep technical logs (IP address, browser) for security purposes.",
           "Under the GDPR, you have the right to access, correct and delete your data by writing to nathanridacker@gmail.com. You may also lodge a complaint with the CNIL (cnil.fr)."
         ]
       }
