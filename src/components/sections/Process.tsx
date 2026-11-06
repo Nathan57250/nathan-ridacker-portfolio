@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Container from '../ui/Container'
 
@@ -36,7 +36,7 @@ export default function Process() {
 
           <ol className="process-grid">
             {steps.map((step, i) => (
-              <motion.li
+              <m.li
                 key={step.title}
                 className="process-step"
                 initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ export default function Process() {
                 <p style={{ fontSize: '14px', lineHeight: 1.7, color: 'var(--color-muted-2)' }}>
                   {step.description}
                 </p>
-              </motion.li>
+              </m.li>
             ))}
           </ol>
 

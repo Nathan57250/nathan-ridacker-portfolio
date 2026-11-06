@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
 export default function Hero() {
@@ -25,7 +25,7 @@ export default function Hero() {
       </div>
 
       {/* Available badge */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.2 }}
@@ -35,10 +35,10 @@ export default function Hero() {
         <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '12px', color: 'var(--color-muted-2)', letterSpacing: '0.08em' }}>
           {t('hero.available')}
         </span>
-      </motion.div>
+      </m.div>
 
       {/* Main title */}
-      <motion.h1
+      <m.h1
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1 }}
@@ -55,10 +55,10 @@ export default function Hero() {
       >
         {t('hero.name')}
         <span style={{ color: 'var(--color-accent)' }}>.</span>
-      </motion.h1>
+      </m.h1>
 
       {/* Bottom row */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
@@ -110,7 +110,7 @@ export default function Hero() {
             {t('hero.cta_contact')}
           </a>
         </div>
-      </motion.div>
+      </m.div>
 
       {/* Bottom border */}
       <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '1px', background: 'var(--color-border)' }} />

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Container from '../ui/Container'
 
@@ -30,7 +30,7 @@ export default function Testimonials() {
 
           <div className="testimonials-grid">
             {items.map((item, i) => (
-              <motion.figure
+              <m.figure
                 key={item.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function Testimonials() {
                     {item.role}
                   </div>
                 </figcaption>
-              </motion.figure>
+              </m.figure>
             ))}
           </div>
 

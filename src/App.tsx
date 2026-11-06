@@ -11,6 +11,7 @@ import LegalNotice from './components/pages/LegalNotice'
 import KarateCase from './components/pages/KarateCase'
 import { ThemeProvider } from './hooks/useTheme'
 import { useTranslation } from 'react-i18next'
+import { domAnimation, LazyMotion, MotionConfig } from 'framer-motion'
 import type { ComponentType } from 'react'
 
 const PAGES: Record<string, ComponentType> = {
@@ -26,32 +27,36 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <Navbar />
-      <main style={{ width: '100%' }}>
-        {Page ? <Page /> : (
-          <>
-            <Hero />
-            <About />
-            <Services />
-            <Projects />
-            <Testimonials />
-            <Skills />
-            <Process />
-            <Contact />
-          </>
-        )}
-      </main>
-      <footer className="site-footer" style={{ borderTop: '1px solid var(--color-border)' }}>
-        <span style={footerText}>
-          © {new Date().getFullYear()} NATHAN RIDACKER
-        </span>
-        <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
-          <a href="/mentions-legales" style={{ ...footerText, textDecoration: 'none' }}>
-            {t('legal.title').toUpperCase()}
-          </a>
-          <span style={footerText}>BUILT WITH REACT</span>
-        </div>
-      </footer>
+      <LazyMotion features={domAnimation} strict>
+        <MotionConfig reducedMotion="user">
+          <Navbar />
+          <main style={{ width: '100%' }}>
+            {Page ? <Page /> : (
+              <>
+                <Hero />
+                <About />
+                <Services />
+                <Projects />
+                <Testimonials />
+                <Skills />
+                <Process />
+                <Contact />
+              </>
+            )}
+          </main>
+          <footer className="site-footer" style={{ borderTop: '1px solid var(--color-border)' }}>
+            <span style={footerText}>
+              © {new Date().getFullYear()} NATHAN RIDACKER
+            </span>
+            <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+              <a href="/mentions-legales" style={{ ...footerText, textDecoration: 'none' }}>
+                {t('legal.title').toUpperCase()}
+              </a>
+              <span style={footerText}>BUILT WITH REACT</span>
+            </div>
+          </footer>
+        </MotionConfig>
+      </LazyMotion>
     </ThemeProvider>
   )
 }

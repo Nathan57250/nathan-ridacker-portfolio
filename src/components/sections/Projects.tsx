@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Container from '../ui/Container'
 
@@ -255,7 +255,7 @@ export default function Projects() {
               const link = PROJECT_LINKS[key]
 
               return (
-                <motion.div
+                <m.div
                   key={key}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -341,7 +341,7 @@ export default function Projects() {
                   <span className="project-arrow" style={{ fontFamily: 'DM Mono, monospace', fontSize: '20px', color: 'var(--color-muted)', paddingTop: '4px' }}>
                     →
                   </span>
-                </motion.div>
+                </m.div>
               )
             })}
 

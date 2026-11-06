@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
 import { Menu, Moon, Sun, X } from 'lucide-react'
@@ -35,7 +35,7 @@ export default function Navbar() {
   ]
 
   return (
-    <motion.nav
+    <m.nav
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4 }}
@@ -95,7 +95,7 @@ export default function Navbar() {
           onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-muted-2)')}
         >
           <AnimatePresence mode="wait" initial={false}>
-            <motion.span
+            <m.span
               key={theme}
               initial={{ rotate: -90, opacity: 0 }}
               animate={{ rotate: 0, opacity: 1 }}
@@ -104,7 +104,7 @@ export default function Navbar() {
               style={{ display: 'flex' }}
             >
               {theme === 'dark' ? <Sun size={18} strokeWidth={1.5} /> : <Moon size={18} strokeWidth={1.5} />}
-            </motion.span>
+            </m.span>
           </AnimatePresence>
         </button>
 
@@ -155,7 +155,7 @@ export default function Navbar() {
 
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
+          <m.div
             id="mobile-menu"
             className="nav-mobile-menu"
             initial={{ opacity: 0, y: -8 }}
@@ -183,9 +183,9 @@ export default function Navbar() {
                 {label}
               </a>
             ))}
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </m.nav>
   )
 }

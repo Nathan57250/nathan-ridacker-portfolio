@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Container from '../ui/Container'
 
@@ -36,7 +36,7 @@ export default function Services() {
 
           <div className="services-grid">
             {items.map((item, i) => (
-              <motion.div
+              <m.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function Services() {
                 <p style={{ fontSize: '14px', lineHeight: 1.7, color: 'var(--color-muted-2)' }}>
                   {item.description}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
