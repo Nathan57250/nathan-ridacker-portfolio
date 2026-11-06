@@ -67,5 +67,45 @@
     "email_label": "Email me",
     "github_label": "GitHub",
     "linkedin_label": "LinkedIn"
+  },
+  "legal": {
+    "title": "Legal notice",
+    "back": "Back to home",
+    "updated": "Last updated: November 2026",
+    "sections": [
+      {
+        "title": "Publisher",
+        "lines": [
+          "Nathan Ridacker, sole trader (registration in progress)",
+          "6 rue Octave Corzani, 54580 Auboué, France",
+          "Contact: nathanridacker@gmail.com · +33 6 10 69 25 44",
+          "Publication director: Nathan Ridacker"
+        ]
+      },
+      {
+        "title": "Hosting",
+        "lines": [
+          "Vercel Inc.",
+          "440 N Barranca Ave #4133, Covina, CA 91723, USA",
+          "vercel.com"
+        ]
+      },
+      {
+        "title": "Intellectual property",
+        "lines": [
+          "All content on this site (text, visuals, photograph, code) is the property of Nathan Ridacker unless stated otherwise. Any reproduction without prior permission is prohibited.",
+          "Names and visuals of the projects shown belong to their respective owners."
+        ]
+      },
+      {
+        "title": "Personal data",
+        "lines": [
+          "This site sets no cookies and uses no analytics.",
+          "Information you send by email is only used to answer your request and is never shared with third parties.",
+          "Fonts are loaded from Google Fonts, which means your IP address is sent to Google. The host may also keep technical logs (IP address, browser) for security purposes.",
+          "Under the GDPR, you have the right to access, correct and delete your data by writing to nathanridacker@gmail.com. You may also lodge a complaint with the CNIL (cnil.fr)."
+        ]
+      }
+    ]
   }
 }

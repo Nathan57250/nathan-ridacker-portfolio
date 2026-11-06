@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    { "source": "/mentions-legales", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

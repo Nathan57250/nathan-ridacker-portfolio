@@ -5,7 +5,7 @@ export default function Hero() {
   const { t } = useTranslation()
 
   return (
-    <section id="hero" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '0 40px 80px', overflow: 'hidden', width: '100%' }}>
+    <section id="hero" className="hero" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', overflow: 'hidden', width: '100%' }}>
 
       {/* Big background number */}
       <div style={{
@@ -73,7 +73,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div style={{ display: 'flex', gap: '12px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
           <a
             href="#projects"
             style={{

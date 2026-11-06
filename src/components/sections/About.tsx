@@ -22,10 +22,10 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }}
+            className="about-grid"
           >
             {/* Photo */}
-            <div>
+            <div className="about-photo">
               <img
                 src={photo}
                 alt={t('about.photo_alt')}

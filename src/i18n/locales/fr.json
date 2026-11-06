@@ -67,5 +67,45 @@
     "email_label": "M'écrire",
     "github_label": "GitHub",
     "linkedin_label": "LinkedIn"
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "back": "Retour à l'accueil",
+    "updated": "Dernière mise à jour : novembre 2026",
+    "sections": [
+      {
+        "title": "Éditeur du site",
+        "lines": [
+          "Nathan Ridacker, entrepreneur individuel (immatriculation en cours)",
+          "6 rue Octave Corzani, 54580 Auboué, France",
+          "Contact : nathanridacker@gmail.com · +33 6 10 69 25 44",
+          "Directeur de la publication : Nathan Ridacker"
+        ]
+      },
+      {
+        "title": "Hébergement",
+        "lines": [
+          "Vercel Inc.",
+          "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
+          "vercel.com"
+        ]
+      },
+      {
+        "title": "Propriété intellectuelle",
+        "lines": [
+          "L'ensemble des contenus de ce site (textes, visuels, photographie, code) est la propriété de Nathan Ridacker, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.",
+          "Les noms et visuels des projets présentés appartiennent à leurs propriétaires respectifs."
+        ]
+      },
+      {
+        "title": "Données personnelles",
+        "lines": [
+          "Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience.",
+          "Les informations que vous transmettez par e-mail sont utilisées uniquement pour répondre à votre demande et ne sont jamais cédées à des tiers.",
+          "Les polices de caractères sont chargées depuis Google Fonts, ce qui implique la transmission de votre adresse IP à Google. L'hébergeur peut également conserver des journaux techniques (adresse IP, navigateur) à des fins de sécurité.",
+          "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en écrivant à nathanridacker@gmail.com. Vous pouvez aussi adresser une réclamation à la CNIL (cnil.fr)."
+        ]
+      }
+    ]
   }
 }

@@ -26,18 +26,10 @@ export default function Skills() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0' }}
+            className="skills-grid"
           >
-            {(Object.entries(SKILLS)).map(([cat, items], i) => (
-              <div
-                key={cat}
-                style={{
-                  padding: '0 40px 0 0',
-                  borderRight: i < 2 ? '1px solid var(--color-border)' : 'none',
-                  paddingLeft: i > 0 ? '40px' : '0',
-                  paddingRight: i < 2 ? '40px' : '0',
-                }}
-              >
+            {(Object.entries(SKILLS)).map(([cat, items]) => (
+              <div key={cat} className="skills-col">
                 <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-accent)', letterSpacing: '0.1em', marginBottom: '28px' }}>
                   {t(`skills.categories.${cat}`).toUpperCase()}
                 </p>

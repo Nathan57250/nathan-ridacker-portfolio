@@ -263,11 +263,8 @@ export default function Projects() {
                   {...(link ? {
                     onClick: () => window.open(link, '_blank', 'noopener,noreferrer'),
                   } : {})}
+                  className="project-row"
                   style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr auto',
-                    gap: '32px',
-                    alignItems: 'start',
                     padding: '40px 0',
                     borderTop: '1px solid var(--color-border)',
                     cursor: link ? 'pointer' : 'default',
@@ -287,7 +284,7 @@ export default function Projects() {
                   }}
                 >
                   {/* Content + Preview */}
-                  <div style={{ display: 'flex', gap: '40px', alignItems: 'flex-start' }}>
+                  <div className="project-body">
                     <div style={{ flex: 1 }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '12px' }}>
                         <h3 style={{
@@ -338,7 +335,7 @@ export default function Projects() {
                   </div>
 
                   {/* Arrow */}
-                  <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '20px', color: 'var(--color-muted)', paddingTop: '4px' }}>
+                  <span className="project-arrow" style={{ fontFamily: 'DM Mono, monospace', fontSize: '20px', color: 'var(--color-muted)', paddingTop: '4px' }}>
                     →
                   </span>
                 </motion.div>
