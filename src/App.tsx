@@ -25,9 +25,10 @@ export default function App() {
   const { t } = useTranslation()
   const footerText = { fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.06em' }
 
-  // Sub-pages set their own title
+  // Sub-pages set their own title; their description comes from the static HTML generated at build
   useEffect(() => {
-    if (!Page) document.title = t('meta.title')
+    if (Page) return
+    document.title = t('meta.title')
     document.querySelector('meta[name="description"]')?.setAttribute('content', t('meta.description'))
   }, [t])
 
