@@ -5,7 +5,7 @@ import { Menu, Moon, Sun, X } from 'lucide-react'
 import { useTheme } from '../../hooks/useTheme'
 
 export default function Navbar() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { theme, toggle } = useTheme()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -26,13 +26,10 @@ export default function Navbar() {
 
   const solid = scrolled || menuOpen
 
-  const links = [
-    { href: '/#about', label: lang === 'fr' ? 'À propos' : 'About' },
-    { href: '/#services', label: 'Services' },
-    { href: '/#projects', label: lang === 'fr' ? 'Projets' : 'Projects' },
-    { href: '/#skills', label: 'Stack' },
-    { href: '/#contact', label: 'Contact' },
-  ]
+  const links = (['about', 'services', 'projects', 'skills', 'contact'] as const).map(id => ({
+    href: `/#${id}`,
+    label: t(`nav.${id}`),
+  }))
 
   return (
     <m.nav
@@ -75,8 +72,8 @@ export default function Navbar() {
         {/* Theme toggle */}
         <button
           onClick={toggle}
-          title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
-          aria-label={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+          title={theme === 'dark' ? t('nav.light_mode') : t('nav.dark_mode')}
+          aria-label={theme === 'dark' ? t('nav.light_mode') : t('nav.dark_mode')}
           className="icon-btn"
           style={{
             width: '32px',
@@ -131,7 +128,7 @@ export default function Navbar() {
         <button
           className="nav-burger"
           onClick={() => setMenuOpen(o => !o)}
-          aria-label={menuOpen ? (lang === 'fr' ? 'Fermer le menu' : 'Close menu') : (lang === 'fr' ? 'Ouvrir le menu' : 'Open menu')}
+          aria-label={menuOpen ? t('nav.close_menu') : t('nav.open_menu')}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           style={{

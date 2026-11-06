@@ -52,7 +52,7 @@ export default function App() {
               <a href="/mentions-legales" style={{ ...footerText, textDecoration: 'none' }}>
                 {t('legal.title').toUpperCase()}
               </a>
-              <span style={footerText}>BUILT WITH REACT</span>
+              <span style={footerText}>{t('footer.built_with').toUpperCase()}</span>
             </div>
           </footer>
         </MotionConfig>
