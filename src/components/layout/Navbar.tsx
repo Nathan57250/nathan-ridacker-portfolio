@@ -64,9 +64,8 @@ export default function Navbar() {
             <a
               key={href}
               href={href}
-              style={{ fontFamily: 'DM Mono, monospace', fontSize: '12px', color: 'var(--color-muted-2)', textDecoration: 'none', letterSpacing: '0.04em', transition: 'color 0.2s' }}
-              onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-text)')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-muted-2)')}
+              className="nav-link"
+              style={{ fontFamily: 'DM Mono, monospace', fontSize: '12px', textDecoration: 'none', letterSpacing: '0.04em' }}
             >
               {label}
             </a>
@@ -78,6 +77,7 @@ export default function Navbar() {
           onClick={toggle}
           title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
           aria-label={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+          className="icon-btn"
           style={{
             width: '32px',
             height: '32px',
@@ -86,13 +86,9 @@ export default function Navbar() {
             justifyContent: 'center',
             border: 'none',
             background: 'transparent',
-            color: 'var(--color-muted-2)',
             cursor: 'pointer',
-            transition: 'color 0.2s',
             flexShrink: 0,
           }}
-          onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-accent)')}
-          onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-muted-2)')}
         >
           <AnimatePresence mode="wait" initial={false}>
             <m.span

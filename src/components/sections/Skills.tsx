@@ -37,23 +37,13 @@ export default function Skills() {
                   {items.map(skill => (
                     <span
                       key={skill}
+                      className="skill-chip"
                       style={{
                         fontFamily: 'DM Mono, monospace',
                         fontSize: '12px',
                         padding: '8px 14px',
-                        border: '1px solid var(--color-border)',
-                        color: 'var(--color-muted-2)',
                         letterSpacing: '0.02em',
-                        transition: 'all 0.15s',
                         cursor: 'default',
-                      }}
-                      onMouseEnter={e => {
-                        e.currentTarget.style.borderColor = 'var(--color-accent)'
-                        e.currentTarget.style.color = 'var(--color-accent)'
-                      }}
-                      onMouseLeave={e => {
-                        e.currentTarget.style.borderColor = 'var(--color-border)'
-                        e.currentTarget.style.color = 'var(--color-muted-2)'
                       }}
                     >
                       {skill}

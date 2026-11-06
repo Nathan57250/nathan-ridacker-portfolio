@@ -76,6 +76,7 @@ export default function Hero() {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
           <a
             href="#projects"
+            className="btn-primary"
             style={{
               fontFamily: 'DM Mono, monospace',
               fontSize: '13px',
@@ -85,27 +86,21 @@ export default function Hero() {
               fontWeight: 500,
               textDecoration: 'none',
               letterSpacing: '0.04em',
-              transition: 'opacity 0.2s',
             }}
-            onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
-            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
           >
             {t('hero.cta_projects')} →
           </a>
           <a
             href="#contact"
+            className="btn-outline"
             style={{
               fontFamily: 'DM Mono, monospace',
               fontSize: '13px',
               padding: '14px 28px',
-              border: '1px solid var(--color-border)',
               color: 'var(--color-text)',
               textDecoration: 'none',
               letterSpacing: '0.04em',
-              transition: 'border-color 0.2s',
             }}
-            onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--color-muted-2)')}
-            onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--color-border)')}
           >
             {t('hero.cta_contact')}
           </a>

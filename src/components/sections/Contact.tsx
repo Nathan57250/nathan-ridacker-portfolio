@@ -58,6 +58,7 @@ export default function Contact() {
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
               <a
                 href="mailto:nathanridacker@gmail.com"
+                className="btn-primary"
                 style={{
                   fontFamily: 'DM Mono, monospace',
                   fontSize: '13px',
@@ -67,10 +68,7 @@ export default function Contact() {
                   fontWeight: 500,
                   textDecoration: 'none',
                   letterSpacing: '0.04em',
-                  transition: 'opacity 0.2s',
                 }}
-                onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
-                onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
               >
                 {t('contact.email_label')} →
               </a>
@@ -79,6 +77,7 @@ export default function Contact() {
                 href="https://github.com/Nathan57250"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="btn-outline"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -86,14 +85,10 @@ export default function Contact() {
                   fontFamily: 'DM Mono, monospace',
                   fontSize: '13px',
                   padding: '16px 32px',
-                  border: '1px solid var(--color-border)',
                   color: 'var(--color-text)',
                   textDecoration: 'none',
                   letterSpacing: '0.04em',
-                  transition: 'border-color 0.2s',
                 }}
-                onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--color-muted-2)')}
-                onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--color-border)')}
               >
                 <GithubIcon />
                 GitHub
@@ -103,6 +98,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/nathan-ridacker/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="btn-outline"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -110,14 +106,10 @@ export default function Contact() {
                   fontFamily: 'DM Mono, monospace',
                   fontSize: '13px',
                   padding: '16px 32px',
-                  border: '1px solid var(--color-border)',
                   color: 'var(--color-text)',
                   textDecoration: 'none',
                   letterSpacing: '0.04em',
-                  transition: 'border-color 0.2s',
                 }}
-                onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--color-muted-2)')}
-                onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--color-border)')}
               >
                 <LinkedinIcon />
                 LinkedIn

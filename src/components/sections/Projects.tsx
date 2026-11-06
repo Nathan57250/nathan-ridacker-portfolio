@@ -268,22 +268,8 @@ export default function Projects() {
                   } : {})}
                   className="project-row"
                   style={{
-                    padding: '40px 0',
                     borderTop: '1px solid var(--color-border)',
                     cursor: link ? 'pointer' : 'default',
-                    transition: 'background 0.2s, padding 0.2s, margin 0.2s',
-                  }}
-                  onMouseEnter={e => {
-                    const el = e.currentTarget
-                    el.style.background = 'var(--color-surface)'
-                    el.style.padding = '40px 24px'
-                    el.style.margin = '0 -24px'
-                  }}
-                  onMouseLeave={e => {
-                    const el = e.currentTarget
-                    el.style.background = 'transparent'
-                    el.style.padding = '40px 0'
-                    el.style.margin = '0'
                   }}
                 >
                   {/* Content + Preview */}
