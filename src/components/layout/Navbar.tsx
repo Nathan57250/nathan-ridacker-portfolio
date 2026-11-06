@@ -105,7 +105,7 @@ export default function Navbar() {
         <button
           onClick={() => {
             const next = lang === 'fr' ? 'en' : 'fr'
-            localStorage.setItem('lang', next)
+            try { localStorage.setItem('lang', next) } catch { /* storage blocked: choice not persisted */ }
             i18n.changeLanguage(next)
           }}
           aria-label={lang === 'fr' ? 'Switch to English' : 'Passer en français'}

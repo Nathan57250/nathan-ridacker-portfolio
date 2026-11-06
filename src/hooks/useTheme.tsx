@@ -19,7 +19,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   // Only persist an explicit choice, so the system preference applies until then
   const toggle = () => {
     const next = theme === 'dark' ? 'light' : 'dark'
-    localStorage.setItem('theme', next)
+    try { localStorage.setItem('theme', next) } catch { /* storage blocked: choice not persisted */ }
     setTheme(next)
   }
 

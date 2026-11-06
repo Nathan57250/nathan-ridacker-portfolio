@@ -6,7 +6,9 @@ import fr from './locales/fr.json'
 const SUPPORTED = ['fr', 'en'] as const
 
 function detectLanguage(): string {
-  const saved = localStorage.getItem('lang')
+  let saved: string | null = null
+  // Throws when storage is blocked (privacy settings, some in-app browsers)
+  try { saved = localStorage.getItem('lang') } catch { /* fall back to browser language */ }
   if (saved && (SUPPORTED as readonly string[]).includes(saved)) return saved
   const browser = navigator.languages
     .map(l => l.slice(0, 2).toLowerCase())
