@@ -2,9 +2,11 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Container from '../ui/Container'
 
-const PROJECTS = ['photographer', 'elderScrolls', 'karate', 'openspace'] as const
+// Open Space Virtuel mis de côté : réajouter 'openspace' ici, dans PREVIEWS et décommenter OpenspacePreview
+const PROJECTS = ['photographer', 'elderScrolls', 'karate'] as const
 
 const PROJECT_LINKS: Partial<Record<(typeof PROJECTS)[number], string>> = {
+  'photographer': 'https://svelte-silence-sauvage.vercel.app/home',
   elderScrolls: 'https://elder-scrolls-lore.vercel.app',
 }
 
@@ -77,61 +79,61 @@ function KaratePreview() {
   )
 }
 
-function OpenspacePreview() {
-  const tiles = Array.from({ length: 6 * 4 })
-  return (
-    <div style={{
-      width: '200px',
-      height: '130px',
-      background: '#1a2a1a',
-      border: '1px solid #2a3a2a',
-      overflow: 'hidden',
-      flexShrink: 0,
-      position: 'relative',
-    }}>
-      {/* Pixel grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', width: '100%', height: '100%', opacity: 0.6 }}>
-        {tiles.map((_, i) => (
-          <div key={i} style={{
-            border: '0.5px solid #2a3a2a',
-            background: i % 7 === 0 ? '#2d4a2d' : i % 11 === 0 ? '#1a3a1a' : '#1a2a1a',
-          }} />
-        ))}
-      </div>
-      {/* Avatar dots */}
-      {[
-        { x: '20%', y: '30%', color: '#c8ff47' },
-        { x: '55%', y: '55%', color: '#ff8c47' },
-        { x: '75%', y: '25%', color: '#47c8ff' },
-      ].map((dot, i) => (
-        <div key={i} style={{
-          position: 'absolute',
-          left: dot.x,
-          top: dot.y,
-          width: '10px',
-          height: '10px',
-          background: dot.color,
-          imageRendering: 'pixelated',
-          boxShadow: `0 0 6px ${dot.color}`,
-        }} />
-      ))}
-      {/* WIP label */}
-      <div style={{
-        position: 'absolute',
-        bottom: '8px',
-        right: '8px',
-        fontFamily: 'monospace',
-        fontSize: '9px',
-        padding: '2px 6px',
-        border: '1px solid #c8ff47',
-        color: '#c8ff47',
-        letterSpacing: '0.08em',
-      }}>
-        WIP
-      </div>
-    </div>
-  )
-}
+// function OpenspacePreview() {
+//   const tiles = Array.from({ length: 6 * 4 })
+//   return (
+//     <div style={{
+//       width: '200px',
+//       height: '130px',
+//       background: '#1a2a1a',
+//       border: '1px solid #2a3a2a',
+//       overflow: 'hidden',
+//       flexShrink: 0,
+//       position: 'relative',
+//     }}>
+//       {/* Pixel grid */}
+//       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', width: '100%', height: '100%', opacity: 0.6 }}>
+//         {tiles.map((_, i) => (
+//           <div key={i} style={{
+//             border: '0.5px solid #2a3a2a',
+//             background: i % 7 === 0 ? '#2d4a2d' : i % 11 === 0 ? '#1a3a1a' : '#1a2a1a',
+//           }} />
+//         ))}
+//       </div>
+//       {/* Avatar dots */}
+//       {[
+//         { x: '20%', y: '30%', color: '#c8ff47' },
+//         { x: '55%', y: '55%', color: '#ff8c47' },
+//         { x: '75%', y: '25%', color: '#47c8ff' },
+//       ].map((dot, i) => (
+//         <div key={i} style={{
+//           position: 'absolute',
+//           left: dot.x,
+//           top: dot.y,
+//           width: '10px',
+//           height: '10px',
+//           background: dot.color,
+//           imageRendering: 'pixelated',
+//           boxShadow: `0 0 6px ${dot.color}`,
+//         }} />
+//       ))}
+//       {/* WIP label */}
+//       <div style={{
+//         position: 'absolute',
+//         bottom: '8px',
+//         right: '8px',
+//         fontFamily: 'monospace',
+//         fontSize: '9px',
+//         padding: '2px 6px',
+//         border: '1px solid #c8ff47',
+//         color: '#c8ff47',
+//         letterSpacing: '0.08em',
+//       }}>
+//         WIP
+//       </div>
+//     </div>
+//   )
+// }
 
 function ElderScrollsPreview() {
   const eras = [
@@ -226,7 +228,7 @@ const PREVIEWS = {
   photographer: PhotographerPreview,
   elderScrolls: ElderScrollsPreview,
   karate: KaratePreview,
-  openspace: OpenspacePreview,
+  // openspace: OpenspacePreview,
 }
 
 export default function Projects() {

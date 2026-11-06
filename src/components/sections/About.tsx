@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { User } from 'lucide-react'
 import Container from '../ui/Container'
+import photo from '../../assets/nathan.jpg'
 
 export default function About() {
   const { t } = useTranslation()
@@ -26,22 +26,20 @@ export default function About() {
           >
             {/* Photo */}
             <div>
-              {/* Replace inner content with <img src={photo} className="w-full h-full object-cover" alt={t('about.photo_alt')} /> */}
-              <div style={{
-                width: '100%',
-                aspectRatio: '4/5',
-                background: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '12px',
-                color: 'var(--color-muted)',
-              }}>
-                <User size={40} strokeWidth={1} />
-                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', letterSpacing: '0.08em' }}>PHOTO À VENIR</span>
-              </div>
+              <img
+                src={photo}
+                alt={t('about.photo_alt')}
+                loading="lazy"
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  aspectRatio: '4/5',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  background: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                }}
+              />
             </div>
 
             {/* Text */}
@@ -73,17 +71,17 @@ export default function About() {
                 </div>
                 <div>
                   <div style={{ fontFamily: 'Playfair Display, serif', fontSize: '40px', fontWeight: 900, color: 'var(--color-text)', lineHeight: 1 }}>
-                    3<span style={{ color: 'var(--color-accent)' }}>+</span>
+                    3
                   </div>
                   <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '11px', color: 'var(--color-muted)', letterSpacing: '0.08em', marginTop: '6px' }}>
-                    PROJETS PERSO
+                    {t('about.projects_label').toUpperCase()}
                   </div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                 <span style={{ width: '32px', height: '1px', background: 'var(--color-accent)' }} />
-                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '12px', color: 'var(--color-accent)', letterSpacing: '0.06em' }}>FundsDLT · Luxembourg</span>
+                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '12px', color: 'var(--color-accent)', letterSpacing: '0.06em' }}>{t('about.tagline')}</span>
               </div>
             </div>
           </motion.div>

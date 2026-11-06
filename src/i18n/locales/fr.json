@@ -8,23 +8,25 @@
   "hero": {
     "greeting": "Bonjour, je suis",
     "name": "Nathan Ridacker",
-    "title": "Développeur Front-End",
-    "subtitle": "6 ans d'expérience à construire des interfaces ambitieuses avec React, Svelte & React Native. Basé au Luxembourg, disponible en remote.",
-    "cta_projects": "Voir mes projets",
-    "cta_contact": "Me contacter",
-    "available": "Ouvert aux opportunités remote"
+    "title": "Applications métier sur mesure",
+    "subtitle": "Développeur freelance, je conçois des applications web et mobiles taillées pour vos processus : outils internes, back-offices, tableaux de bord, apps terrain. React, Svelte & React Native.",
+    "cta_projects": "Voir mes réalisations",
+    "cta_contact": "Parler de votre projet",
+    "available": "Disponible pour vos projets"
   },
   "about": {
     "section_label": "À propos",
-    "title": "Passionné par les interfaces qui prennent vie",
-    "body": "Développeur front-end chez FundsDLT au Luxembourg depuis juin 2020. Au fil de ces 6 ans, j'ai développé une maîtrise solide de React, TypeScript et des écosystèmes modernes du web. En parallèle, je construis des projets personnels ambitieux — systèmes temps réel, pixel art interactif, applications mobiles — pour explorer ce que le front-end peut vraiment faire. Je cherche activement des opportunités remote en Europe où ce type de travail est valorisé.",
+    "title": "Des outils pensés pour votre métier",
+    "body": "Un tableur qui déborde, un logiciel générique qui ne colle pas à votre façon de travailler, un processus encore géré à la main ? Je transforme ces besoins en applications sur mesure, simples à utiliser et faciles à faire évoluer. Fort de 6 ans d'expérience sur des applications métier exigeantes dans la finance, je vous accompagne de la compréhension du besoin jusqu'à la mise en production : cadrage, maquettes, développement web et mobile, puis suivi. Vous avez un interlocuteur unique, qui parle votre langage autant que celui du code.",
     "photo_alt": "Photo de Nathan Ridacker",
     "experience_label": "Ans d'expérience",
-    "location_label": "Luxembourg — Remote"
+    "projects_label": "Projets livrés",
+    "tagline": "Freelance · Luxembourg & France",
+    "location_label": "Luxembourg — France"
   },
   "projects": {
     "section_label": "Projets",
-    "title": "Ce que je construis",
+    "title": "Quelques réalisations",
     "items": {
       "photographer": {
         "title": "Portfolio Photographe",
@@ -33,12 +35,12 @@
       },
       "elderScrolls": {
         "title": "Elder Scrolls Lore",
-        "description": "Wiki encyclopédique tri-lingue (FR/EN/ES) dédié au lore de Tamriel. Projet-expérience entièrement piloté avec Claude Opus 4.6 : architecture, code et articles générés par IA sous ma direction, pour explorer ce qu'un développeur et une IA peuvent produire ensemble.",
+        "description": "Wiki encyclopédique trilingue (FR/EN/ES) dédié au lore de Tamriel, conçu avec l'IA comme accélérateur. Je pilote l'architecture, je cadre, je relis et je valide ; l'IA produit code et contenus sous contrôle. La démonstration qu'une IA bien encadrée réduit les délais et les coûts sans sacrifier la qualité, une approche que j'applique à vos projets.",
         "tags": ["SvelteKit 5", "MDsveX", "Tailwind v4", "Pagefind", "IA-assisté"]
       },
       "karate": {
         "title": "Gestionnaire Club de Karaté",
-        "description": "Application mobile de gestion d'un club de karaté — suivi des membres, présences, progression des ceintures et calendrier d'événements.",
+        "description": "Application métier mobile pour un club de karaté : gestion des membres, suivi des présences, progression des ceintures et calendrier d'événements. Fini les feuilles papier et les fichiers Excel.",
         "tags": ["React Native", "Expo", "TypeScript"]
       },
       "openspace": {
@@ -60,8 +62,8 @@
   },
   "contact": {
     "section_label": "Contact",
-    "title": "Travaillons ensemble",
-    "subtitle": "Disponible pour des opportunités remote en Europe. Je réponds sous 48h.",
+    "title": "Parlons de votre projet",
+    "subtitle": "Un besoin, une idée, un outil à remplacer ? Décrivez-moi votre projet, je vous réponds sous 48h avec une première estimation.",
     "email_label": "M'écrire",
     "github_label": "GitHub",
     "linkedin_label": "LinkedIn"

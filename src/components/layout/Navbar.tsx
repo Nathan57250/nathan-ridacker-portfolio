@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
+import { Moon, Sun } from 'lucide-react'
 import { useTheme } from '../../hooks/useTheme'
 
 export default function Navbar() {
@@ -63,31 +64,35 @@ export default function Navbar() {
         <button
           onClick={toggle}
           title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+          aria-label={theme === 'dark' ? 'Light mode' : 'Dark mode'}
           style={{
-            width: '36px',
-            height: '20px',
-            borderRadius: '10px',
-            border: '1px solid var(--color-border)',
-            background: theme === 'dark' ? 'var(--color-surface)' : 'var(--color-accent)',
+            width: '32px',
+            height: '32px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: 'none',
+            background: 'transparent',
+            color: 'var(--color-muted-2)',
             cursor: 'pointer',
-            position: 'relative',
-            transition: 'background 0.3s, border-color 0.3s',
+            transition: 'color 0.2s',
             flexShrink: 0,
           }}
+          onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-accent)')}
+          onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-muted-2)')}
         >
-          <motion.span
-            animate={{ x: theme === 'dark' ? 2 : 16 }}
-            transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-            style={{
-              position: 'absolute',
-              top: '2px',
-              width: '14px',
-              height: '14px',
-              borderRadius: '50%',
-              background: theme === 'dark' ? 'var(--color-muted-2)' : 'var(--color-bg)',
-              display: 'block',
-            }}
-          />
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.span
+              key={theme}
+              initial={{ rotate: -90, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              exit={{ rotate: 90, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              style={{ display: 'flex' }}
+            >
+              {theme === 'dark' ? <Sun size={18} strokeWidth={1.5} /> : <Moon size={18} strokeWidth={1.5} />}
+            </motion.span>
+          </AnimatePresence>
         </button>
 
         {/* Lang toggle */}

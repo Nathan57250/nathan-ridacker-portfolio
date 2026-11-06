@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import Container from '../ui/Container'
 
 const SKILLS: Record<string, string[]> = {
-  frontend: ['React', 'TypeScript', 'Svelte', 'SvelteKit', 'JavaScript ES2022+', 'HTML5', 'CSS3', 'Tailwind CSS', 'Framer Motion', 'Phaser 3', 'WebSockets', 'Canvas API'],
+  frontend: ['React', 'TypeScript', 'JavaScript', 'Svelte', 'SvelteKit', 'HTML5', 'CSS3', 'Tailwind CSS'],
   mobile: ['React Native', 'Expo'],
   tools: ['Vite', 'Git', 'Figma', 'Node.js', 'REST APIs'],
 }
