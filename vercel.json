@@ -1,7 +1,7 @@
 {
   "rewrites": [
-    { "source": "/mentions-legales", "destination": "/index.html" },
-    { "source": "/projets/karate", "destination": "/index.html" }
+    { "source": "/mentions-legales", "destination": "/mentions-legales/index.html" },
+    { "source": "/projets/karate", "destination": "/projets/karate/index.html" }
   ],
   "headers": [
     {
