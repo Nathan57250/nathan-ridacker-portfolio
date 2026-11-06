@@ -8,6 +8,7 @@ const PROJECTS = ['photographer', 'elderScrolls', 'karate'] as const
 const PROJECT_LINKS: Partial<Record<(typeof PROJECTS)[number], string>> = {
   'photographer': 'https://svelte-silence-sauvage.vercel.app/home',
   elderScrolls: 'https://elder-scrolls-lore.vercel.app',
+  karate: '/projets/karate',
 }
 
 function PhotographerPreview() {
@@ -66,7 +67,7 @@ function KaratePreview() {
           <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: '#1e2030', border: '1px solid #2e3050' }} />
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px', marginBottom: '8px' }}>
-          {['Membres', 'Présences', 'Ceintures', 'Événements'].map(label => (
+          {['Membres', 'Séances', 'Ceintures', 'Événements'].map(label => (
             <div key={label} style={{ background: '#1a1a28', padding: '5px 7px', borderRadius: '4px' }}>
               <div style={{ fontSize: '6px', color: '#6060a0', marginBottom: '2px', fontFamily: 'monospace' }}>{label.toUpperCase()}</div>
               <div style={{ fontSize: '10px', fontWeight: 700, color: '#eeeef5', fontFamily: 'monospace' }}>—</div>
@@ -261,7 +262,9 @@ export default function Projects() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
                   {...(link ? {
-                    onClick: () => window.open(link, '_blank', 'noopener,noreferrer'),
+                    onClick: () => link.startsWith('/')
+                      ? window.location.assign(link)
+                      : window.open(link, '_blank', 'noopener,noreferrer'),
                   } : {})}
                   className="project-row"
                   style={{

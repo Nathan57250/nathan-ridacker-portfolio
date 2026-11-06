@@ -62,7 +62,7 @@
       },
       "karate": {
         "title": "Karaté Club Manager",
-        "description": "Mobile business app for a karaté club: member management, attendance tracking, belt progression and an event calendar. No more paper sheets and Excel files.",
+        "description": "Mobile business app for a karaté club: member management, belt progression and a calendar of upcoming sessions and events (seminars, competitions, gradings) with notification reminders. No more paper sheets and Excel files.",
         "tags": ["React Native", "Expo", "TypeScript"]
       },
       "openspace": {
@@ -83,12 +83,28 @@
         "placeholder": true
       },
       {
-        "quote": "No more paper attendance sheets: the app saves us precious time at every class, and tracking belt progression has never been easier.",
+        "quote": "No more paper schedules: everyone sees the upcoming sessions on their phone, with a reminder so they don't forget, and tracking belt progression has never been easier.",
         "name": "First Last",
         "role": "President · Karaté club",
         "placeholder": true
       }
     ]
+  },
+  "karate_case": {
+    "back": "Back to projects",
+    "need_label": "The need",
+    "need": "The club managed its members, session schedule and belt gradings on paper and in Excel files. Scattered information, hard to keep up to date and hardly accessible to members.",
+    "solution_label": "The solution",
+    "solution": "A mobile app that brings the club's day-to-day together, available anytime from a phone.",
+    "features": [
+      { "title": "Members", "description": "Centralised, always up-to-date member records." },
+      { "title": "Belts", "description": "Track each student's progression." },
+      { "title": "Sessions & reminders", "description": "Calendar of upcoming sessions, with notifications so nobody forgets." },
+      { "title": "Events", "description": "Upcoming seminars, competitions and gradings, in the same calendar." }
+    ],
+    "screenshots_label": "Preview",
+    "screenshot_alt": "App screenshot",
+    "cta_text": "Is your organisation or business still managing everything by hand? Let's talk about the tool that would save you time."
   },
   "skills": {
     "section_label": "Skills",

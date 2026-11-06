@@ -8,10 +8,17 @@ import Skills from './components/sections/Skills'
 import Testimonials from './components/sections/Testimonials'
 import Navbar from './components/layout/Navbar'
 import LegalNotice from './components/pages/LegalNotice'
+import KarateCase from './components/pages/KarateCase'
 import { ThemeProvider } from './hooks/useTheme'
 import { useTranslation } from 'react-i18next'
+import type { ComponentType } from 'react'
 
-const isLegalPage = window.location.pathname.replace(/\/$/, '') === '/mentions-legales'
+const PAGES: Record<string, ComponentType> = {
+  '/mentions-legales': LegalNotice,
+  '/projets/karate': KarateCase,
+}
+
+const Page = PAGES[window.location.pathname.replace(/\/$/, '')]
 
 export default function App() {
   const { t } = useTranslation()
@@ -21,7 +28,7 @@ export default function App() {
     <ThemeProvider>
       <Navbar />
       <main style={{ width: '100%' }}>
-        {isLegalPage ? <LegalNotice /> : (
+        {Page ? <Page /> : (
           <>
             <Hero />
             <About />

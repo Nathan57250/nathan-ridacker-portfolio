@@ -62,7 +62,7 @@
       },
       "karate": {
         "title": "Gestionnaire Club de Karaté",
-        "description": "Application métier mobile pour un club de karaté : gestion des membres, suivi des présences, progression des ceintures et calendrier d'événements. Fini les feuilles papier et les fichiers Excel.",
+        "description": "Application métier mobile pour un club de karaté : gestion des membres, progression des ceintures et calendrier des prochaines séances et événements (stages, compétitions, passages de grade) avec rappels par notification. Fini les feuilles papier et les fichiers Excel.",
         "tags": ["React Native", "Expo", "TypeScript"]
       },
       "openspace": {
@@ -83,12 +83,28 @@
         "placeholder": true
       },
       {
-        "quote": "Fini les feuilles de présence papier : l'application nous fait gagner un temps précieux à chaque cours, et le suivi des ceintures n'a jamais été aussi simple.",
+        "quote": "Fini les plannings papier : chacun retrouve les prochaines séances sur son téléphone, avec un rappel pour ne pas les oublier, et le suivi des ceintures n'a jamais été aussi simple.",
         "name": "Prénom Nom",
         "role": "Président · Club de karaté",
         "placeholder": true
       }
     ]
+  },
+  "karate_case": {
+    "back": "Retour aux projets",
+    "need_label": "Le besoin",
+    "need": "Le club gérait ses adhérents, le planning des séances et le passage des ceintures sur papier et dans des fichiers Excel. Des informations dispersées, difficiles à tenir à jour et peu accessibles pour les membres.",
+    "solution_label": "La solution",
+    "solution": "Une application mobile qui centralise la vie du club, accessible à tout moment depuis le téléphone.",
+    "features": [
+      { "title": "Membres", "description": "Fiches adhérents centralisées et toujours à jour." },
+      { "title": "Ceintures", "description": "Suivi de la progression de chaque pratiquant." },
+      { "title": "Séances & rappels", "description": "Calendrier des prochaines séances, avec des notifications pour ne pas les oublier." },
+      { "title": "Événements", "description": "Stages, compétitions et passages de grade à venir, dans le même calendrier." }
+    ],
+    "screenshots_label": "Aperçu",
+    "screenshot_alt": "Capture d'écran de l'application",
+    "cta_text": "Votre association ou votre entreprise gère encore tout à la main ? Parlons de l'outil qui vous ferait gagner du temps."
   },
   "skills": {
     "section_label": "Compétences",
