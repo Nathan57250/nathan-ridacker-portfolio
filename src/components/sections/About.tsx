@@ -1,7 +1,7 @@
 import { m } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Container from '../ui/Container'
-import photo from '../../assets/nathan.jpg'
+import photo from '../../assets/nathan.webp'
 
 export default function About() {
   const { t } = useTranslation()
@@ -29,7 +29,10 @@ export default function About() {
               <img
                 src={photo}
                 alt={t('about.photo_alt')}
+                width={727}
+                height={727}
                 loading="lazy"
+                decoding="async"
                 style={{
                   display: 'block',
                   width: '100%',
