@@ -57,7 +57,7 @@ export default function Contact() {
 
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
               <a
-                href="mailto:nathanridacker@gmail.com"
+                href="/contact"
                 className="btn-primary"
                 style={{
                   fontFamily: 'DM Mono, monospace',

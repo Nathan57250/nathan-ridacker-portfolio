@@ -13,6 +13,11 @@ const PAGES = [
     description: 'Étude de cas : application mobile pour un club de karaté. Membres, ceintures, calendrier des séances et événements avec rappels par notification.',
   },
   {
+    path: '/contact',
+    title: 'Contact — Nathan Ridacker',
+    description: 'Contactez Nathan Ridacker, développeur front-end freelance : décrivez votre projet, réponse sous 48h avec une première estimation.',
+  },
+  {
     path: '/mentions-legales',
     title: 'Mentions légales — Nathan Ridacker',
     description: 'Mentions légales et données personnelles du site de Nathan Ridacker, développeur freelance au Luxembourg et en France.',

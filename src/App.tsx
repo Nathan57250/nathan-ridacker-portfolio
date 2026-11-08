@@ -9,6 +9,7 @@ import Testimonials from './components/sections/Testimonials'
 import Navbar from './components/layout/Navbar'
 import LegalNotice from './components/pages/LegalNotice'
 import KarateCase from './components/pages/KarateCase'
+import ContactPage from './components/pages/ContactPage'
 import NotFound from './components/pages/NotFound'
 import { ThemeProvider } from './hooks/useTheme'
 import { useTranslation } from 'react-i18next'
@@ -18,6 +19,7 @@ import { useEffect, type ComponentType } from 'react'
 const PAGES: Record<string, ComponentType> = {
   '/mentions-legales': LegalNotice,
   '/projets/karate': KarateCase,
+  '/contact': ContactPage,
 }
 
 const path = window.location.pathname.replace(/\/$/, '')
