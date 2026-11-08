@@ -113,6 +113,8 @@
     ],
     "screenshots_label": "Preview",
     "screenshot_alt": "App screenshot",
+    "carousel_prev": "Previous screenshots",
+    "carousel_next": "Next screenshots",
     "cta_text": "Is your organisation or business still managing everything by hand? Let's talk about the tool that would save you time."
   },
   "skills": {

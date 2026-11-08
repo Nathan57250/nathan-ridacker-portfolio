@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import Container from '../ui/Container'
+import ScreenshotCarousel from '../ui/ScreenshotCarousel'
 
 // Drop screenshots in this folder; they are picked up automatically, sorted by filename
 const SCREENSHOTS = Object.entries(
@@ -81,17 +82,12 @@ export default function KarateCase() {
           <section style={{ padding: '40px 0', borderTop: '1px solid var(--color-border)' }}>
             <h2 style={sectionLabel}>{t('karate_case.screenshots_label').toUpperCase()}</h2>
             {SCREENSHOTS.length > 0 ? (
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
-                {SCREENSHOTS.map((src, i) => (
-                  <img
-                    key={src}
-                    src={src}
-                    alt={`${t('karate_case.screenshot_alt')} ${i + 1}`}
-                    loading="lazy"
-                    style={{ display: 'block', width: '100%', height: 'auto', border: '1px solid var(--color-border)' }}
-                  />
-                ))}
-              </div>
+              <ScreenshotCarousel
+                images={SCREENSHOTS}
+                altPrefix={t('karate_case.screenshot_alt')}
+                prevLabel={t('karate_case.carousel_prev')}
+                nextLabel={t('karate_case.carousel_next')}
+              />
             ) : (
               <div style={{ padding: '48px 24px', border: '1px dashed var(--color-accent)', textAlign: 'center', fontFamily: 'DM Mono, monospace', fontSize: '12px', color: 'var(--color-accent)', letterSpacing: '0.04em', lineHeight: 1.8 }}>
                 PLACEHOLDER — src/assets/projects/karate/01-*.png, 02-*.png…

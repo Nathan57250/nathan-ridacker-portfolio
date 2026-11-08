@@ -113,6 +113,8 @@
     ],
     "screenshots_label": "Aperçu",
     "screenshot_alt": "Capture d'écran de l'application",
+    "carousel_prev": "Captures précédentes",
+    "carousel_next": "Captures suivantes",
     "cta_text": "Votre association ou votre entreprise gère encore tout à la main ? Parlons de l'outil qui vous ferait gagner du temps."
   },
   "skills": {
