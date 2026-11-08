@@ -1,18 +1,18 @@
 import { m } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import HeroVisual from './HeroVisual'
 
 export default function Hero() {
   const { t } = useTranslation()
 
   return (
-    <section id="hero" className="hero" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', overflow: 'hidden', width: '100%' }}>
+    <section id="hero" className="hero" style={{ position: 'relative', isolation: 'isolate', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', overflow: 'hidden', width: '100%' }}>
 
       {/* Big background number */}
-      <div aria-hidden="true" style={{
-        position: 'absolute', top: '50%', right: '-20px',
-        transform: 'translateY(-50%)',
+      <div aria-hidden="true" className="hero-bg" style={{
+        position: 'absolute',
+        zIndex: -1,
         fontFamily: 'Playfair Display, serif',
-        fontSize: 'clamp(200px, 30vw, 420px)',
         fontWeight: 900,
         color: 'transparent',
         WebkitTextStroke: '1px var(--color-border)',
@@ -23,6 +23,8 @@ export default function Hero() {
       }}>
         NR
       </div>
+
+      <HeroVisual />
 
       {/* Available badge */}
       <m.div
@@ -53,8 +55,12 @@ export default function Hero() {
           marginBottom: '32px',
         }}
       >
-        {t('hero.name')}
-        <span style={{ color: 'var(--color-accent)' }}>.</span>
+        {t('hero.name').split(' ').map((word, i, words) => (
+          <span key={i} style={{ display: 'block' }}>
+            {word}
+            {i === words.length - 1 && <span style={{ color: 'var(--color-accent)' }}>.</span>}
+          </span>
+        ))}
       </m.h1>
 
       {/* Bottom row */}

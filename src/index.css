@@ -70,7 +70,44 @@ body {
 .nav-burger { display: none; }
 .nav-mobile-menu { display: none; }
 
-.hero { padding: 0 40px 80px; }
+.hero { padding: 0 40px 80px; min-height: 100vh; }
+.hero-bg { top: 50%; right: -20px; transform: translateY(-50%); font-size: clamp(200px, 30vw, 420px); }
+
+/* Decorative dashboard wireframe filling the hero's empty center on wide screens */
+.hero-visual { position: absolute; top: 50%; left: 50%; width: clamp(240px, 20vw, 340px); transform: translate(-50%, -50%); pointer-events: none; animation: hv-in 1s 0.6s ease-out both; }
+.hero-visual svg { overflow: visible; }
+.hero-visual :is(.hv-nav, .hv-kpi, .hv-bar) { transform-box: fill-box; }
+.hv-float { animation: hv-float 6s ease-in-out infinite alternate; }
+.hv-pulse { animation: hv-pulse 1.6s ease-in-out infinite alternate; }
+.hv-nav { animation: hv-nav 10s ease-in-out infinite; }
+.hv-kpi { transform-origin: left; animation: hv-kpi 4s ease-in-out infinite; }
+.hv-bar { transform-origin: bottom; animation: hv-bar 3s ease-in-out infinite; }
+.hv-line { stroke-dasharray: 1; animation: hv-line 5s ease-in-out infinite; }
+.hv-dot { animation: hv-dot 5s ease-in-out infinite; }
+
+@keyframes hv-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes hv-float { from { translate: 0 0; } to { translate: 0 -10px; } }
+@keyframes hv-pulse { from { opacity: 1; } to { opacity: 0.25; } }
+@keyframes hv-nav {
+  0%, 18% { transform: translateY(0); }
+  20%, 38% { transform: translateY(16px); }
+  40%, 58% { transform: translateY(32px); }
+  60%, 78% { transform: translateY(48px); }
+  80%, 98% { transform: translateY(64px); }
+  100% { transform: translateY(0); }
+}
+@keyframes hv-kpi { 0%, 100% { transform: scaleX(1); } 35% { transform: scaleX(0.55); } 65% { transform: scaleX(0.8); } }
+@keyframes hv-bar { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.5); } }
+@keyframes hv-line { 0% { stroke-dashoffset: 1; opacity: 1; } 40%, 80% { stroke-dashoffset: 0; opacity: 1; } 95%, 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes hv-dot { 0%, 38% { opacity: 0; } 42%, 80% { opacity: 1; } 95%, 100% { opacity: 0; } }
+
+@media (max-width: 1199px) {
+  .hero-visual { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual, .hero-visual * { animation: none !important; }
+}
 
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 
@@ -148,7 +185,8 @@ body {
   .nav-burger { display: flex; }
   .nav-mobile-menu { display: flex; }
 
-  .hero { padding: 0 24px 64px; }
+  .hero { padding: 128px 24px 64px; min-height: auto; }
+  .hero-bg { top: 72px; right: -12px; transform: none; font-size: 180px; }
 
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-photo { max-width: 400px; }
